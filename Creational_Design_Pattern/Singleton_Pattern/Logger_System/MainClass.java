@@ -24,17 +24,38 @@ public class MainClass {
                             sc.nextLine();
                             System.out.println("Enter the Message: ");
                             Message = sc.nextLine();
-                            LogMessage(_logger,Message,levelChoice);
+                            LogMessage(_logger, Message, levelChoice);
                             break;
                         case 4:
-                            System.out.println("Not Implemented as of now.");
-                            break;
+                            sc.close();
+                            System.out.println("Exitting the Program. Goodbye!!!");
+                            return;
                         default:
                             System.out.println("Invalid Choice !!!!");
                     }
                     break;
 
                 case 2:
+                    _logger = ConsoleLogger.getLoggerInstance();
+                    LogLevelMenu();
+                    levelChoice = sc.nextInt();
+                    switch (levelChoice) {
+                        case 1:
+                        case 2:
+                        case 3:
+                            sc.nextLine();
+                            System.out.println("Enter the Message: ");
+                            Message = sc.nextLine();
+                            LogMessage(_logger, Message, levelChoice);
+                            break;
+                        case 4:
+                            sc.close();
+                            System.out.println("Exitting the program. GoodBye !!!");
+                            return;
+                        default:
+                            System.out.println("Invalid Choice !!!!");
+                    }
+                    break;
                 case 3:
                     System.out.println("Not Implemented as of now.");
                     break;

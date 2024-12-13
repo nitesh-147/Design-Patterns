@@ -24,7 +24,6 @@ public class FileLogger extends AbstractLogger {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(_logFile, true))) {
             writer.write(LogEntry);
             writer.newLine();
-            System.out.println("Logged: " + LogEntry);
         } catch (IOException ex) {
             System.err.println("Error writing Log to the File : " + ex.getMessage());
         }
