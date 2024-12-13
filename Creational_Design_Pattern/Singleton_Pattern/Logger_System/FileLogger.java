@@ -9,7 +9,7 @@ public class FileLogger extends AbstractLogger {
     private FileLogger() {
         // Singleton Pattern is a usecase Where we can see the private constructor.
         // Usually Constructor is made public.
-        this.writeLog("FIleLogger Instance has been Created.");
+        this.logInfo("Logger Instance has been Created.");
     }
 
     public static FileLogger GetLoggerInstance() {
